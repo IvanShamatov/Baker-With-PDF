@@ -59,6 +59,7 @@
 		F92D437F18D0C65D0063F052 /* ThumbsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F92D436A18D0C65D0063F052 /* ThumbsViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		F92D438018D0C65D0063F052 /* UIXToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F92D436C18D0C65D0063F052 /* UIXToolbarView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		F92D438218D0C8BD0063F052 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D438118D0C8BD0063F052 /* ImageIO.framework */; };
+		F92D438518D0CBE40063F052 /* JSONStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = F92D438418D0CBE40063F052 /* JSONStatus.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +158,8 @@
 		F92D436B18D0C65D0063F052 /* UIXToolbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIXToolbarView.h; sourceTree = "<group>"; };
 		F92D436C18D0C65D0063F052 /* UIXToolbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIXToolbarView.m; sourceTree = "<group>"; };
 		F92D438118D0C8BD0063F052 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		F92D438318D0CBE40063F052 /* JSONStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONStatus.h; sourceTree = "<group>"; };
+		F92D438418D0CBE40063F052 /* JSONStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONStatus.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +208,8 @@
 				ABADF3F816C7BAD900F52F3C /* NSURL+Extensions.m */,
 				AB67F5B816EE99B2005A04F6 /* Reachability.h */,
 				AB67F5B916EE99B2005A04F6 /* Reachability.m */,
+				F92D438318D0CBE40063F052 /* JSONStatus.h */,
+				F92D438418D0CBE40063F052 /* JSONStatus.m */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -437,6 +442,7 @@
 				F92D437618D0C65D0063F052 /* ReaderThumbCache.m in Sources */,
 				ABD7D45F1616FC5B008B13B5 /* BakerIssue.m in Sources */,
 				ABC270D11616F3CB00AD97E9 /* IssuesManager.m in Sources */,
+				F92D438518D0CBE40063F052 /* JSONStatus.m in Sources */,
 				ABD24C1E1620309B0042E49C /* IssueViewController.m in Sources */,
 				9FAB40DA162B13CF0088E9C1 /* UIColor+Extensions.m in Sources */,
 				ABD6FC4016544EAD0032BC44 /* NSData+Base64.m in Sources */,

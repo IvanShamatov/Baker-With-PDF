@@ -32,12 +32,10 @@
 
 #import <UIKit/UIKit.h>
 
-#import "InterceptorWindow.h"
 #import "ShelfViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) InterceptorWindow *window;
 @property (strong, nonatomic) UIViewController *rootViewController;
 @property (strong, nonatomic) UINavigationController *rootNavigationController;
 
