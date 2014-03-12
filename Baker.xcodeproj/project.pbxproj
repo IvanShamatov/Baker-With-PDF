@@ -12,24 +12,10 @@
 		9F58D85115D66E870027902C /* UICustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F58D84E15D66E870027902C /* UICustomNavigationBar.m */; };
 		9F58D85215D66E870027902C /* UICustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F58D85015D66E870027902C /* UICustomNavigationController.m */; };
 		9F5EB3BD15FCA3A100E13796 /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5EB3BC15FCA3A100E13796 /* NSString+Extensions.m */; };
-		9F8FC1C415C55E8C0065F0A3 /* BakerBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FC1C315C55E8C0065F0A3 /* BakerBook.m */; };
 		9FAB40DA162B13CF0088E9C1 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB40D9162B13CF0088E9C1 /* UIColor+Extensions.m */; };
 		9FF795A715B4C57E00899E51 /* ShelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF795A615B4C57E00899E51 /* ShelfViewController.m */; };
 		AB2317D4169F808000BE3BE7 /* PurchasesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2317D3169F808000BE3BE7 /* PurchasesManager.m */; };
 		AB246A3116C5BC6E00715E25 /* NSMutableURLRequest+WebServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AB246A3016C5BC6E00715E25 /* NSMutableURLRequest+WebServiceClient.m */; };
-		AB26005116011D9D00E9AA66 /* BakerBookStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = AB26005016011D9D00E9AA66 /* BakerBookStatus.m */; };
-		AB40045315B4B83000D87E2A /* BakerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB40042B15B4B83000D87E2A /* BakerViewController.m */; };
-		AB40045F15B4B83000D87E2A /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB40043415B4B83000D87E2A /* IndexViewController.m */; };
-		AB40046115B4B83000D87E2A /* InterceptorWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = AB40043615B4B83000D87E2A /* InterceptorWindow.m */; };
-		AB40046315B4B83000D87E2A /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = AB40043A15B4B83000D87E2A /* GTMNSString+HTML.m */; };
-		AB40046715B4B83000D87E2A /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = AB40044015B4B83000D87E2A /* ioapi.c */; };
-		AB40046915B4B83000D87E2A /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = AB40044215B4B83000D87E2A /* mztools.c */; };
-		AB40046B15B4B83000D87E2A /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = AB40044415B4B83000D87E2A /* unzip.c */; };
-		AB40046D15B4B83000D87E2A /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = AB40044615B4B83000D87E2A /* zip.c */; };
-		AB40046F15B4B83000D87E2A /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = AB40044915B4B83000D87E2A /* SSZipArchive.m */; };
-		AB40047115B4B83000D87E2A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = AB40044B15B4B83000D87E2A /* Utils.m */; };
-		AB40047315B4B83000D87E2A /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB40044D15B4B83000D87E2A /* ModalViewController.m */; };
-		AB40047715B4B83000D87E2A /* PageTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB40045215B4B83000D87E2A /* PageTitleLabel.m */; };
 		AB40048115B4B90200D87E2A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB40048015B4B90200D87E2A /* MessageUI.framework */; };
 		AB40048315B4B90A00D87E2A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB40048215B4B90A00D87E2A /* libz.dylib */; };
 		AB40048515B4BB8B00D87E2A /* books in Resources */ = {isa = PBXBuildFile; fileRef = AB40048415B4BB8B00D87E2A /* books */; };
@@ -49,7 +35,6 @@
 		ABD24C1E1620309B0042E49C /* IssueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD24C1D1620309B0042E49C /* IssueViewController.m */; };
 		ABD6FC4016544EAD0032BC44 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD6FC3F16544EAD0032BC44 /* NSData+Base64.m */; };
 		ABD7D45F1616FC5B008B13B5 /* BakerIssue.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD7D45E1616FC5B008B13B5 /* BakerIssue.m */; };
-		ABDC05AF16A4C42A00F6B63D /* JSONStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDC05AE16A4C42A00F6B63D /* JSONStatus.m */; };
 		ABDC05B216A4CB3900F6B63D /* ShelfStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDC05B116A4CB3900F6B63D /* ShelfStatus.m */; };
 		ABF23B1D1708418E003AA3B0 /* BakerAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF23B1C1708418E003AA3B0 /* BakerAPI.m */; };
 		BF0785EB1794AF4000EB988E /* info in Resources */ = {isa = PBXBuildFile; fileRef = BF0785EA1794AF4000EB988E /* info */; };
@@ -87,8 +72,6 @@
 		9F58D85015D66E870027902C /* UICustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomNavigationController.m; sourceTree = "<group>"; };
 		9F5EB3BB15FCA3A100E13796 /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensions.h"; sourceTree = "<group>"; };
 		9F5EB3BC15FCA3A100E13796 /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
-		9F8FC1C215C55E8C0065F0A3 /* BakerBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BakerBook.h; sourceTree = "<group>"; };
-		9F8FC1C315C55E8C0065F0A3 /* BakerBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BakerBook.m; sourceTree = "<group>"; };
 		9FAB40D8162B13CF0088E9C1 /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extensions.h"; sourceTree = "<group>"; };
 		9FAB40D9162B13CF0088E9C1 /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
 		9FF795A515B4C57D00899E51 /* ShelfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShelfViewController.h; sourceTree = "<group>"; };
@@ -97,36 +80,8 @@
 		AB2317D3169F808000BE3BE7 /* PurchasesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchasesManager.m; sourceTree = "<group>"; };
 		AB246A2F16C5BC6E00715E25 /* NSMutableURLRequest+WebServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+WebServiceClient.h"; sourceTree = "<group>"; };
 		AB246A3016C5BC6E00715E25 /* NSMutableURLRequest+WebServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+WebServiceClient.m"; sourceTree = "<group>"; };
-		AB26004F16011D9D00E9AA66 /* BakerBookStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BakerBookStatus.h; sourceTree = "<group>"; };
-		AB26005016011D9D00E9AA66 /* BakerBookStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BakerBookStatus.m; sourceTree = "<group>"; };
 		AB3496BB1661472A00AEB508 /* UIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIConstants.h; sourceTree = "<group>"; };
 		AB379313161759A900B4C1A3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		AB40042A15B4B83000D87E2A /* BakerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BakerViewController.h; sourceTree = "<group>"; };
-		AB40042B15B4B83000D87E2A /* BakerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BakerViewController.m; sourceTree = "<group>"; };
-		AB40043315B4B83000D87E2A /* IndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexViewController.h; sourceTree = "<group>"; };
-		AB40043415B4B83000D87E2A /* IndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexViewController.m; sourceTree = "<group>"; };
-		AB40043515B4B83000D87E2A /* InterceptorWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterceptorWindow.h; sourceTree = "<group>"; };
-		AB40043615B4B83000D87E2A /* InterceptorWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterceptorWindow.m; sourceTree = "<group>"; };
-		AB40043815B4B83000D87E2A /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
-		AB40043915B4B83000D87E2A /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
-		AB40043A15B4B83000D87E2A /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
-		AB40043F15B4B83000D87E2A /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
-		AB40044015B4B83000D87E2A /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
-		AB40044115B4B83000D87E2A /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
-		AB40044215B4B83000D87E2A /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
-		AB40044315B4B83000D87E2A /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
-		AB40044415B4B83000D87E2A /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
-		AB40044515B4B83000D87E2A /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
-		AB40044615B4B83000D87E2A /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
-		AB40044715B4B83000D87E2A /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
-		AB40044815B4B83000D87E2A /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
-		AB40044915B4B83000D87E2A /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
-		AB40044A15B4B83000D87E2A /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
-		AB40044B15B4B83000D87E2A /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
-		AB40044C15B4B83000D87E2A /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
-		AB40044D15B4B83000D87E2A /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
-		AB40045115B4B83000D87E2A /* PageTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageTitleLabel.h; sourceTree = "<group>"; };
-		AB40045215B4B83000D87E2A /* PageTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageTitleLabel.m; sourceTree = "<group>"; };
 		AB40048015B4B90200D87E2A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		AB40048215B4B90A00D87E2A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		AB40048415B4BB8B00D87E2A /* books */ = {isa = PBXFileReference; lastKnownFileType = folder; path = books; sourceTree = "<group>"; };
@@ -157,8 +112,6 @@
 		ABD6FC3F16544EAD0032BC44 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		ABD7D45D1616FC5B008B13B5 /* BakerIssue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BakerIssue.h; sourceTree = "<group>"; };
 		ABD7D45E1616FC5B008B13B5 /* BakerIssue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BakerIssue.m; sourceTree = "<group>"; };
-		ABDC05AD16A4C42A00F6B63D /* JSONStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONStatus.h; sourceTree = "<group>"; };
-		ABDC05AE16A4C42A00F6B63D /* JSONStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONStatus.m; sourceTree = "<group>"; };
 		ABDC05B016A4CB3900F6B63D /* ShelfStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShelfStatus.h; sourceTree = "<group>"; };
 		ABDC05B116A4CB3900F6B63D /* ShelfStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShelfStatus.m; sourceTree = "<group>"; };
 		ABF23B1B1708418E003AA3B0 /* BakerAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BakerAPI.h; sourceTree = "<group>"; };
@@ -260,77 +213,6 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
-		AB40042915B4B83000D87E2A /* BakerView */ = {
-			isa = PBXGroup;
-			children = (
-				AB40042E15B4B83000D87E2A /* img */,
-				AB40043715B4B83000D87E2A /* lib */,
-				AB40045015B4B83000D87E2A /* ui */,
-				9F8FC1C215C55E8C0065F0A3 /* BakerBook.h */,
-				9F8FC1C315C55E8C0065F0A3 /* BakerBook.m */,
-				AB26004F16011D9D00E9AA66 /* BakerBookStatus.h */,
-				AB26005016011D9D00E9AA66 /* BakerBookStatus.m */,
-				AB40042A15B4B83000D87E2A /* BakerViewController.h */,
-				AB40042B15B4B83000D87E2A /* BakerViewController.m */,
-				AB40043315B4B83000D87E2A /* IndexViewController.h */,
-				AB40043415B4B83000D87E2A /* IndexViewController.m */,
-				AB40043515B4B83000D87E2A /* InterceptorWindow.h */,
-				AB40043615B4B83000D87E2A /* InterceptorWindow.m */,
-				AB40044C15B4B83000D87E2A /* ModalViewController.h */,
-				AB40044D15B4B83000D87E2A /* ModalViewController.m */,
-			);
-			path = BakerView;
-			sourceTree = "<group>";
-		};
-		AB40042E15B4B83000D87E2A /* img */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = img;
-			sourceTree = "<group>";
-		};
-		AB40043715B4B83000D87E2A /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				AB40043E15B4B83000D87E2A /* minizip */,
-				AB40043815B4B83000D87E2A /* GTMDefines.h */,
-				AB40043915B4B83000D87E2A /* GTMNSString+HTML.h */,
-				AB40043A15B4B83000D87E2A /* GTMNSString+HTML.m */,
-				AB40044815B4B83000D87E2A /* SSZipArchive.h */,
-				AB40044915B4B83000D87E2A /* SSZipArchive.m */,
-				AB40044A15B4B83000D87E2A /* Utils.h */,
-				AB40044B15B4B83000D87E2A /* Utils.m */,
-				ABDC05AD16A4C42A00F6B63D /* JSONStatus.h */,
-				ABDC05AE16A4C42A00F6B63D /* JSONStatus.m */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		AB40043E15B4B83000D87E2A /* minizip */ = {
-			isa = PBXGroup;
-			children = (
-				AB40043F15B4B83000D87E2A /* crypt.h */,
-				AB40044015B4B83000D87E2A /* ioapi.c */,
-				AB40044115B4B83000D87E2A /* ioapi.h */,
-				AB40044215B4B83000D87E2A /* mztools.c */,
-				AB40044315B4B83000D87E2A /* mztools.h */,
-				AB40044415B4B83000D87E2A /* unzip.c */,
-				AB40044515B4B83000D87E2A /* unzip.h */,
-				AB40044615B4B83000D87E2A /* zip.c */,
-				AB40044715B4B83000D87E2A /* zip.h */,
-			);
-			path = minizip;
-			sourceTree = "<group>";
-		};
-		AB40045015B4B83000D87E2A /* ui */ = {
-			isa = PBXGroup;
-			children = (
-				AB40045115B4B83000D87E2A /* PageTitleLabel.h */,
-				AB40045215B4B83000D87E2A /* PageTitleLabel.m */,
-			);
-			path = ui;
-			sourceTree = "<group>";
-		};
 		AB40047B15B4B8B800D87E2A /* BakerShelf */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,7 +250,6 @@
 				AB40048415B4BB8B00D87E2A /* books */,
 				BF78D1AF180C8F070093DFBC /* BakerAssets.xcassets */,
 				AB40047B15B4B8B800D87E2A /* BakerShelf */,
-				AB40042915B4B83000D87E2A /* BakerView */,
 				ABAFB59115AB9A2E002FA498 /* Baker */,
 				ABAFB58A15AB9A2E002FA498 /* Frameworks */,
 				ABAFB58815AB9A2E002FA498 /* Products */,
@@ -546,26 +427,13 @@
 				F92D436E18D0C65D0063F052 /* ReaderConstants.m in Sources */,
 				ABAFB59815AB9A2E002FA498 /* main.m in Sources */,
 				ABAFB59C15AB9A2E002FA498 /* AppDelegate.m in Sources */,
-				AB40045315B4B83000D87E2A /* BakerViewController.m in Sources */,
-				AB40045F15B4B83000D87E2A /* IndexViewController.m in Sources */,
-				AB40046115B4B83000D87E2A /* InterceptorWindow.m in Sources */,
-				AB40046315B4B83000D87E2A /* GTMNSString+HTML.m in Sources */,
-				AB40046715B4B83000D87E2A /* ioapi.c in Sources */,
-				AB40046915B4B83000D87E2A /* mztools.c in Sources */,
 				F92D437818D0C65D0063F052 /* ReaderThumbQueue.m in Sources */,
-				AB40046B15B4B83000D87E2A /* unzip.c in Sources */,
-				AB40046D15B4B83000D87E2A /* zip.c in Sources */,
-				AB40046F15B4B83000D87E2A /* SSZipArchive.m in Sources */,
-				AB40047115B4B83000D87E2A /* Utils.m in Sources */,
-				AB40047315B4B83000D87E2A /* ModalViewController.m in Sources */,
 				F92D436F18D0C65D0063F052 /* ReaderContentPage.m in Sources */,
 				F92D437718D0C65D0063F052 /* ReaderThumbFetch.m in Sources */,
-				AB40047715B4B83000D87E2A /* PageTitleLabel.m in Sources */,
 				F92D437D18D0C65D0063F052 /* ReaderViewController.m in Sources */,
 				F92D437918D0C65D0063F052 /* ReaderThumbRender.m in Sources */,
 				9FF795A715B4C57E00899E51 /* ShelfViewController.m in Sources */,
 				F92D437518D0C65D0063F052 /* ReaderMainToolbar.m in Sources */,
-				9F8FC1C415C55E8C0065F0A3 /* BakerBook.m in Sources */,
 				F92D437B18D0C65D0063F052 /* ReaderThumbsView.m in Sources */,
 				9F58D85115D66E870027902C /* UICustomNavigationBar.m in Sources */,
 				9F58D85215D66E870027902C /* UICustomNavigationController.m in Sources */,
@@ -573,7 +441,6 @@
 				F92D437C18D0C65D0063F052 /* ReaderThumbView.m in Sources */,
 				9F5EB3BD15FCA3A100E13796 /* NSString+Extensions.m in Sources */,
 				F92D437E18D0C65D0063F052 /* ThumbsMainToolbar.m in Sources */,
-				AB26005116011D9D00E9AA66 /* BakerBookStatus.m in Sources */,
 				F92D437A18D0C65D0063F052 /* ReaderThumbRequest.m in Sources */,
 				F92D437618D0C65D0063F052 /* ReaderThumbCache.m in Sources */,
 				ABD7D45F1616FC5B008B13B5 /* BakerIssue.m in Sources */,
@@ -582,7 +449,6 @@
 				9FAB40DA162B13CF0088E9C1 /* UIColor+Extensions.m in Sources */,
 				ABD6FC4016544EAD0032BC44 /* NSData+Base64.m in Sources */,
 				AB2317D4169F808000BE3BE7 /* PurchasesManager.m in Sources */,
-				ABDC05AF16A4C42A00F6B63D /* JSONStatus.m in Sources */,
 				ABDC05B216A4CB3900F6B63D /* ShelfStatus.m in Sources */,
 				AB246A3116C5BC6E00715E25 /* NSMutableURLRequest+WebServiceClient.m in Sources */,
 				F92D437F18D0C65D0063F052 /* ThumbsViewController.m in Sources */,
