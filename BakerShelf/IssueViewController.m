@@ -33,7 +33,6 @@
 #import <QuartzCore/QuartzCore.h>
 
 #import "IssueViewController.h"
-#import "SSZipArchive.h"
 #import "UIConstants.h"
 #ifdef BAKER_NEWSSTAND
 #import "PurchasesManager.h"

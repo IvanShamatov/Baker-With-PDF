@@ -181,29 +181,6 @@
 }
 #endif
 
-+ (NSArray *)localBooksList {
-    NSMutableArray *booksList = [NSMutableArray array];
-    NSFileManager *localFileManager = [NSFileManager defaultManager];
-    NSString *booksDir = [[NSBundle mainBundle] pathForResource:@"books" ofType:nil];
-
-    NSArray *dirContents = [localFileManager contentsOfDirectoryAtPath:booksDir error:nil];
-    for (NSString *file in dirContents) {
-        NSString *manifestFile = [booksDir stringByAppendingPathComponent:[file stringByAppendingPathComponent:@"book.json"]];
-        if ([localFileManager fileExistsAtPath:manifestFile]) {
-            BakerBook *book = [[[BakerBook alloc] initWithBookPath:[booksDir stringByAppendingPathComponent:file] bundled:YES] autorelease];
-            if (book) {
-                BakerIssue *issue = [[[BakerIssue alloc] initWithBakerBook:book] autorelease];
-                [booksList addObject:issue];
-            } else {
-                NSLog(@"[BakerShelf] ERROR: Book %@ could not be initialized. Is 'book.json' correct and valid?", file);
-            }
-        } else {
-            NSLog(@"[BakerShelf] ERROR: Cannot find 'book.json'. Is it present? Should be here: %@", manifestFile);
-        }
-    }
-
-    return [NSArray arrayWithArray:booksList];
-}
 
 -(void)dealloc {
     [issues release];

@@ -68,6 +68,8 @@ typedef enum transientStates {
 @property (copy, nonatomic) NSString *productID;
 @property (copy, nonatomic) NSString *price;
 
+@property (copy, nonatomic) NSString *location;
+
 
 @property (assign, nonatomic) BakerIssueTransientStatus transientStatus;
 

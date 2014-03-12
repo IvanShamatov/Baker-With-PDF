@@ -41,7 +41,6 @@
 #import "UIColor+Extensions.h"
 #import "Utils.h"
 
-#import "BakerViewController.h"
 #import "BakerAnalyticsEvents.h"
 
 @implementation AppDelegate
@@ -70,9 +69,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
-    #ifdef BAKER_NEWSSTAND
-
-    NSLog(@"====== Baker Newsstand Mode enabled ======");
     [BakerAPI generateUUIDOnce];
 
     // Let the device know we want to handle Newsstand push notifications
@@ -114,18 +110,6 @@
 
     self.rootViewController = [[[ShelfViewController alloc] init] autorelease];
 
-    #else
-
-    NSLog(@"====== Baker Standalone Mode enabled ======");
-    NSArray *books = [IssuesManager localBooksList];
-    if ([books count] == 1) {
-        self.rootViewController = [[[BakerViewController alloc] initWithBook:[[books objectAtIndex:0] bakerBook]] autorelease];
-    } else  {
-        self.rootViewController = [[[ShelfViewController alloc] initWithBooks:books] autorelease];
-    }
-
-    #endif
-
     self.rootNavigationController = [[[UICustomNavigationController alloc] initWithRootViewController:self.rootViewController] autorelease];
     UICustomNavigationBar *navigationBar = (UICustomNavigationBar *)self.rootNavigationController.navigationBar;
 
@@ -142,7 +126,7 @@
         [navigationBar setTintColor:[UIColor colorWithHexString:@"333333"]]; // black will not trigger a pushed status
     }
 
-    self.window = [[[InterceptorWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+//    self.window = [[[InterceptorWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     self.window.backgroundColor = [UIColor whiteColor];
 
     self.window.rootViewController = self.rootNavigationController;

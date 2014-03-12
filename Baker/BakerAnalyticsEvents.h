@@ -32,7 +32,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import "BakerViewController.h"
 #import "ShelfViewController.h"
 #import "IssueViewController.h"
 

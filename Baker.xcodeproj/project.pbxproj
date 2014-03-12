@@ -60,6 +60,7 @@
 		F92D438018D0C65D0063F052 /* UIXToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F92D436C18D0C65D0063F052 /* UIXToolbarView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		F92D438218D0C8BD0063F052 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D438118D0C8BD0063F052 /* ImageIO.framework */; };
 		F92D438518D0CBE40063F052 /* JSONStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = F92D438418D0CBE40063F052 /* JSONStatus.m */; };
+		F92D438818D0F9230063F052 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F92D438718D0F9230063F052 /* Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -160,6 +161,8 @@
 		F92D438118D0C8BD0063F052 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		F92D438318D0CBE40063F052 /* JSONStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONStatus.h; sourceTree = "<group>"; };
 		F92D438418D0CBE40063F052 /* JSONStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONStatus.m; sourceTree = "<group>"; };
+		F92D438618D0F9230063F052 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		F92D438718D0F9230063F052 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +213,8 @@
 				AB67F5B916EE99B2005A04F6 /* Reachability.m */,
 				F92D438318D0CBE40063F052 /* JSONStatus.h */,
 				F92D438418D0CBE40063F052 /* JSONStatus.m */,
+				F92D438618D0F9230063F052 /* Utils.h */,
+				F92D438718D0F9230063F052 /* Utils.m */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -430,6 +435,7 @@
 				F92D437D18D0C65D0063F052 /* ReaderViewController.m in Sources */,
 				F92D437918D0C65D0063F052 /* ReaderThumbRender.m in Sources */,
 				9FF795A715B4C57E00899E51 /* ShelfViewController.m in Sources */,
+				F92D438818D0F9230063F052 /* Utils.m in Sources */,
 				F92D437518D0C65D0063F052 /* ReaderMainToolbar.m in Sources */,
 				F92D437B18D0C65D0063F052 /* ReaderThumbsView.m in Sources */,
 				9F58D85115D66E870027902C /* UICustomNavigationBar.m in Sources */,

@@ -33,7 +33,6 @@
 #import "BakerIssue.h"
 #import "BakerAPI.h"
 
-#import "SSZipArchive.h"
 #import "Reachability.h"
 #import "Utils.h"
 #import "NSURL+Extensions.h"
@@ -46,12 +45,12 @@
 @synthesize date;
 @synthesize url;
 @synthesize path;
-@synthesize bakerBook;
 @synthesize coverPath;
 @synthesize coverURL;
 @synthesize productID;
 @synthesize price;
 @synthesize transientStatus;
+@synthesize location;
 
 @synthesize notificationDownloadStartedName;
 @synthesize notificationDownloadProgressingName;
@@ -59,34 +58,6 @@
 @synthesize notificationDownloadErrorName;
 @synthesize notificationUnzipErrorName;
 
--(id)initWithBakerBook:(BakerBook *)book {
-    self = [super init];
-    if (self) {
-        self.ID = book.ID;
-        self.title = book.title;
-        self.info = @"";
-        self.date = book.date;
-        self.url = [NSURL URLWithString:book.url];
-        self.path = book.path;
-        self.productID = @"";
-        self.price = nil;
-
-        self.bakerBook = book;
-
-        self.coverPath = @"";
-        if (book.cover == nil) {
-            // TODO: set path to a default cover (right now a blank box will be displayed)
-            NSLog(@"Cover not specified for %@, probably missing from book.json", book.ID);
-        } else {
-            self.coverPath = [book.path stringByAppendingPathComponent:book.cover];
-        }
-
-        self.transientStatus = BakerIssueTransientStatusNone;
-
-        [self setNotificationDownloadNames];
-    }
-    return self;
-}
 
 - (void)setNotificationDownloadNames {
     self.notificationDownloadStartedName = [NSString stringWithFormat:@"notification_download_started_%@", self.ID];
@@ -120,11 +91,11 @@
         NKIssue *nkIssue = [nkLib issueWithName:self.ID];
         if (nkIssue) {
             self.path = [[nkIssue contentURL] path];
+            self.location = [self.path stringByAppendingPathComponent:[self.url lastPathComponent]];
         } else {
             self.path = nil;
         }
 
-        self.bakerBook = nil;
 
         self.transientStatus = BakerIssueTransientStatusNone;
 
@@ -194,17 +165,14 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"[BakerShelf] Newsstand - File is being unzipped to %@", destinationPath);
         BOOL unzipSuccessful = NO;
-        unzipSuccessful = [SSZipArchive unzipFileAtPath:[destinationURL path] toDestination:destinationPath];
-        if (!unzipSuccessful) {
-            NSLog(@"[BakerShelf] Newsstand - Unable to unzip file: %@. The file may not be a valid HPUB archive.", [destinationURL path]);
-            dispatch_async(dispatch_get_main_queue(), ^(void) {
-                [[NSNotificationCenter defaultCenter] postNotificationName:notificationUnzipErrorName object:self userInfo:nil];
-            });
-        }
+        
+        NSError *error;
+        NSString *loca = [destinationPath stringByAppendingPathComponent:[self.url lastPathComponent]];
+        unzipSuccessful = [[NSFileManager defaultManager] copyItemAtPath:[destinationURL path] toPath:loca error:&error];
+        self.location = loca;
 
         NSLog(@"[BakerShelf] Newsstand - Removing temporary downloaded file %@", [destinationURL path]);
         NSFileManager *fileMgr = [NSFileManager defaultManager];
-        NSError *error;
         if ([fileMgr removeItemAtPath:[destinationURL path] error:&error] != YES){
             NSLog(@"[BakerShelf] Newsstand - Unable to delete file: %@", [error localizedDescription]);
         }
@@ -309,7 +277,6 @@
     [date release];
     [url release];
     [path release];
-    [bakerBook release];
     [coverPath release];
     [coverURL release];
 

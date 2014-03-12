@@ -34,7 +34,6 @@
 #import "UICustomNavigationBar.h"
 #import "Constants.h"
 
-#import "BakerViewController.h"
 #import "IssueViewController.h"
 
 #import "NSData+Base64.h"
@@ -642,33 +641,21 @@
 
 - (void)readIssue:(BakerIssue *)issue
 {
-    BakerBook *book = nil;
     NSString *status = [issue getStatus];
 
-    #ifdef BAKER_NEWSSTAND
     if ([status isEqual:@"opening"]) {
-        book = [[[BakerBook alloc] initWithBookPath:issue.path bundled:NO] autorelease];
-        if (book) {
-            [self pushViewControllerWithBook:book];
-        } else {
-            NSLog(@"[ERROR] Book %@ could not be initialized", issue.ID);
-            issue.transientStatus = BakerIssueTransientStatusNone;
-            // Let's refresh everything as it's easier. This is an edge case anyway ;)
-            for (IssueViewController *controller in issueViewControllers) {
-                [controller refresh];
-            }
-            [Utils showAlertWithTitle:NSLocalizedString(@"ISSUE_OPENING_FAILED_TITLE", nil)
-                              message:NSLocalizedString(@"ISSUE_OPENING_FAILED_MESSAGE", nil)
-                          buttonTitle:NSLocalizedString(@"ISSUE_OPENING_FAILED_CLOSE", nil)];
+        ReaderDocument *document = [ReaderDocument withDocumentFilePath:issue.location password:nil name:issue.title];
+        
+        if (document != nil) {
+            ReaderViewController *readerViewController = [[ReaderViewController alloc] initWithReaderDocument:document];
+            
+            readerViewController.delegate = self;
+            [self.navigationController pushViewController:readerViewController animated:YES];
+            [readerViewController release];
         }
     }
-    #else
-    if ([status isEqual:@"bundled"]) {
-        book = [issue bakerBook];
-        [self pushViewControllerWithBook:book];
-    }
-    #endif
 }
+    
 - (void)handleReadIssue:(NSNotification *)notification
 {
     IssueViewController *controller = notification.object;
@@ -689,12 +676,6 @@
     }
 
     self.bookToBeProcessed = nil;
-}
-- (void)pushViewControllerWithBook:(BakerBook *)book
-{
-    BakerViewController *bakerViewController = [[BakerViewController alloc] initWithBook:book];
-    [self.navigationController pushViewController:bakerViewController animated:YES];
-    [bakerViewController release];
 }
 
 #pragma mark - Buttons management
@@ -760,6 +741,15 @@
     [popoverView release];
     [popoverContent release];
 }
+
+#pragma mark - ReaderViewControllerDelegate 
+
+- (void)dismissReaderViewController:(ReaderViewController *)viewController
+{
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 #pragma mark - Helper methods
 

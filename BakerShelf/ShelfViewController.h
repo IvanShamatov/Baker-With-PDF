@@ -37,11 +37,11 @@
 #import "IssuesManager.h"
 #import "ShelfStatus.h"
 #import "BakerAPI.h"
-#ifdef BAKER_NEWSSTAND
+#import "ReaderViewController.h"
 #import "PurchasesManager.h"
-#endif
 
-@interface ShelfViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UIActionSheetDelegate, UIWebViewDelegate> {
+
+@interface ShelfViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UIActionSheetDelegate, UIWebViewDelegate, ReaderViewControllerDelegate> {
     BakerAPI *api;
     IssuesManager *issuesManager;
     NSMutableArray *notRecognisedTransactions;
@@ -86,7 +86,6 @@
 - (void)handleReadIssue:(NSNotification *)notification;
 - (void)receiveBookProtocolNotification:(NSNotification *)notification;
 - (void)handleBookToBeProcessed;
-- (void)pushViewControllerWithBook:(BakerBook *)book;
 
 #pragma mark - Buttons management
 -(void)setrefreshButtonEnabled:(BOOL)enabled;

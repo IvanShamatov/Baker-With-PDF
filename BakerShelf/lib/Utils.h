@@ -1,5 +1,5 @@
 //
-//  IssuesManager.h
+//  Utils.h
 //  Baker
 //
 //  ==========================================================================================
@@ -31,21 +31,25 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <NewsstandKit/NewsstandKit.h>
-#import "BakerIssue.h"
 
-@interface IssuesManager : NSObject
+// IOS VERSION COMPARISON MACROS
+#define SYSTEM_VERSION_EQUAL_TO(version)                  ([[[UIDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(version)              ([[[UIDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(version)  ([[[UIDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(version)                 ([[[UIDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(version)     ([[[UIDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] != NSOrderedDescending)
 
-@property (copy, nonatomic) NSArray *issues;
-@property (retain, nonatomic) NSString *shelfManifestPath;
+@interface Utils : NSObject {
+    
+}
 
-#pragma mark - Singleton
-
-+ (IssuesManager *)sharedInstance;
-
--(void)refresh:(void (^)(BOOL)) callback;
--(NSSet *)productIDs;
--(BOOL)hasProductIDs;
--(BakerIssue *)latestIssue;
++ (UIColor *)colorWithRGBHex:(UInt32)hex;
++ (UIColor *)colorWithHexString:(NSString *)stringToConvert;
++ (NSString *)stringFromInterfaceOrientation:(UIInterfaceOrientation)orientation;
++ (NSString *)appID;
++ (NSDate *)dateWithFormattedString:(NSString *)string;
++ (void)showAlertWithTitle:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle;
++ (void)webView:(UIWebView *)webView dispatchHTMLEvent:(NSString *)event;
++ (void)webView:(UIWebView *)webView dispatchHTMLEvent:(NSString *)event withParams:(NSDictionary *)params;
 
 @end
