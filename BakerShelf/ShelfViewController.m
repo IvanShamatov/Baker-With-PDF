@@ -640,13 +640,13 @@
     NSString *status = [issue getStatus];
 
     if ([status isEqual:@"opening"]) {
-        ReaderDocument *document = [ReaderDocument withDocumentFilePath:issue.location password:nil name:issue.title];
+        ReaderDocument *document = [ReaderDocument withDocumentFilePath:issue.location password:nil];
         
         if (document != nil) {
             ReaderViewController *readerViewController = [[ReaderViewController alloc] initWithReaderDocument:document];
             
             readerViewController.delegate = self;
-            [self.navigationController pushViewController:readerViewController animated:YES];
+            [self presentViewController:readerViewController animated:YES completion:nil];
             [readerViewController release];
         }
     }
@@ -734,8 +734,7 @@
 
 - (void)dismissReaderViewController:(ReaderViewController *)viewController
 {
-    [self.navigationController setNavigationBarHidden:NO animated:NO];
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
