@@ -222,11 +222,7 @@
                                     action:@selector(handleInfoButtonPressed:)]
                                    autorelease];
 
-    // Remove file info.html if you don't want the info button to be added to the shelf navigation bar
-    NSString *infoPath = [[NSBundle mainBundle] pathForResource:@"info" ofType:@"html" inDirectory:@"info"];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:infoPath]) {
-        self.navigationItem.rightBarButtonItem = infoButton;
-    }
+    self.navigationItem.rightBarButtonItem = infoButton;
 }
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -713,22 +709,15 @@
         }
     }
     
-    // Prepare new view
-    UIViewController *popoverContent = [[UIViewController alloc] init];
-    UIWebView *popoverView = [[UIWebView alloc] init];
-    popoverView.backgroundColor = [UIColor blackColor];
-    popoverView.delegate = self;
-    popoverContent.view = popoverView;
+    InfoTableViewController *popoverContent = [[InfoTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     
-    // Load HTML file
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"info" ofType:@"html" inDirectory:@"info"];
-    [popoverView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]]];
-    
+    UINavigationController *navigController = [[UINavigationController alloc] initWithRootViewController:popoverContent];
     // Open view
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
         // On iPad use the UIPopoverController
-        infoPopover = [[UIPopoverController alloc] initWithContentViewController:popoverContent];
+        infoPopover = [[UIPopoverController alloc] initWithContentViewController:navigController];
+        [infoPopover setPopoverContentSize:CGSizeMake(320.0, 400.0)];
         [infoPopover presentPopoverFromBarButtonItem:sender
                             permittedArrowDirections:UIPopoverArrowDirectionUp
                                             animated:YES];
@@ -737,8 +726,7 @@
         // On iPhone push the view controller to the navigation
         [self.navigationController pushViewController:popoverContent animated:YES];
     }
-    
-    [popoverView release];
+    popoverContent.delegate = self;
     [popoverContent release];
 }
 
@@ -769,6 +757,15 @@
     } else {
         return 104;
     }
+}
+
+#pragma mark - InfoTableViewControllerDelegate
+- (void)infoTableViewControllerDelegateDismissAnimated:(BOOL)animated {
+    [infoPopover dismissPopoverAnimated:animated];
+}
+
+- (void)infoTableViewControllerDelegatePushViewWithFile:(NSString *)file{
+    
 }
 
 @end

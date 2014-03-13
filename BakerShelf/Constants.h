@@ -39,7 +39,7 @@
     // The following line, together with other settings, enables Newsstand mode.
     // Remove this, remove the NewsstandKit.framework and the Newsstand entries in Baker-Info.plist to disable it.
     // See: https://github.com/Simbul/baker/wiki/Newsstand-vs-Bundled-publications-support-in-Baker-4.0
-    #define BAKER_NEWSSTAND
+    #define BAKER_NEWSSTAND 
 
     #ifdef BAKER_NEWSSTAND
 
@@ -47,7 +47,7 @@
         // Mandatory - This constant defines where the JSON file containing all the publications is located.
         // For more information on this file, see: https://github.com/Simbul/baker/wiki/Newsstand-shelf-JSON
         // E.g. @"http://example.com/shelf.json"
-        #define NEWSSTAND_MANIFEST_URL @"http://bakerframework.com/demo/shelf.json"
+        #define NEWSSTAND_MANIFEST_URL @"http://localhost:3000/manifest.json"
 
         // ----------------------------------------------------------------------------------------------------
         // Optional - This constant specifies the URL to ping back when a user purchases an issue or a subscription.

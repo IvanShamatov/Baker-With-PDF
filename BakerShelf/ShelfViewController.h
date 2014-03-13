@@ -39,9 +39,9 @@
 #import "BakerAPI.h"
 #import "ReaderViewController.h"
 #import "PurchasesManager.h"
+#import "InfoTableViewController.h"
 
-
-@interface ShelfViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UIActionSheetDelegate, UIWebViewDelegate, ReaderViewControllerDelegate> {
+@interface ShelfViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UIActionSheetDelegate, UIWebViewDelegate, ReaderViewControllerDelegate, InfoTableViewControllerDelegate> {
     BakerAPI *api;
     IssuesManager *issuesManager;
     NSMutableArray *notRecognisedTransactions;

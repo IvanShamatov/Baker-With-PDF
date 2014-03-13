@@ -61,6 +61,8 @@
 		F92D438218D0C8BD0063F052 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D438118D0C8BD0063F052 /* ImageIO.framework */; };
 		F92D438518D0CBE40063F052 /* JSONStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = F92D438418D0CBE40063F052 /* JSONStatus.m */; };
 		F92D438818D0F9230063F052 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F92D438718D0F9230063F052 /* Utils.m */; };
+		F95E006B18D1830A0025ED95 /* InterceptorWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F95E006A18D1830A0025ED95 /* InterceptorWindow.m */; };
+		F95E006E18D1880B0025ED95 /* InfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F95E006D18D1880B0025ED95 /* InfoTableViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -163,6 +165,10 @@
 		F92D438418D0CBE40063F052 /* JSONStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONStatus.m; sourceTree = "<group>"; };
 		F92D438618D0F9230063F052 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		F92D438718D0F9230063F052 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		F95E006918D1830A0025ED95 /* InterceptorWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterceptorWindow.h; sourceTree = "<group>"; };
+		F95E006A18D1830A0025ED95 /* InterceptorWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterceptorWindow.m; sourceTree = "<group>"; };
+		F95E006C18D1880B0025ED95 /* InfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewController.h; sourceTree = "<group>"; };
+		F95E006D18D1880B0025ED95 /* InfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +250,10 @@
 				9F58D85015D66E870027902C /* UICustomNavigationController.m */,
 				ABF23B1B1708418E003AA3B0 /* BakerAPI.h */,
 				ABF23B1C1708418E003AA3B0 /* BakerAPI.m */,
+				F95E006918D1830A0025ED95 /* InterceptorWindow.h */,
+				F95E006A18D1830A0025ED95 /* InterceptorWindow.m */,
+				F95E006C18D1880B0025ED95 /* InfoTableViewController.h */,
+				F95E006D18D1880B0025ED95 /* InfoTableViewController.m */,
 			);
 			path = BakerShelf;
 			sourceTree = "<group>";
@@ -427,6 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F92D436E18D0C65D0063F052 /* ReaderConstants.m in Sources */,
+				F95E006B18D1830A0025ED95 /* InterceptorWindow.m in Sources */,
 				ABAFB59815AB9A2E002FA498 /* main.m in Sources */,
 				ABAFB59C15AB9A2E002FA498 /* AppDelegate.m in Sources */,
 				F92D437818D0C65D0063F052 /* ReaderThumbQueue.m in Sources */,
@@ -452,6 +463,7 @@
 				ABD24C1E1620309B0042E49C /* IssueViewController.m in Sources */,
 				9FAB40DA162B13CF0088E9C1 /* UIColor+Extensions.m in Sources */,
 				ABD6FC4016544EAD0032BC44 /* NSData+Base64.m in Sources */,
+				F95E006E18D1880B0025ED95 /* InfoTableViewController.m in Sources */,
 				AB2317D4169F808000BE3BE7 /* PurchasesManager.m in Sources */,
 				ABDC05B216A4CB3900F6B63D /* ShelfStatus.m in Sources */,
 				AB246A3116C5BC6E00715E25 /* NSMutableURLRequest+WebServiceClient.m in Sources */,
@@ -554,9 +566,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Baker/Baker-Prefix.pch";
 				INFOPLIST_FILE = "Baker/Baker-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -569,9 +581,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Baker/Baker-Prefix.pch";
 				INFOPLIST_FILE = "Baker/Baker-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
