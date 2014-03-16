@@ -26,6 +26,8 @@
 #import "ReaderConstants.h"
 #import "ReaderMainToolbar.h"
 #import "ReaderDocument.h"
+#import "UIConstants.h"
+#import "UIColor+Extensions.h"
 
 #import <MessageUI/MessageUI.h>
 
@@ -45,7 +47,7 @@
 #define BUTTON_HEIGHT 30.0f
 
 #define DONE_BUTTON_WIDTH 56.0f
-#define THUMBS_BUTTON_WIDTH 40.0f
+#define THUMBS_BUTTON_WIDTH 80.0f
 #define PRINT_BUTTON_WIDTH 40.0f
 #define EMAIL_BUTTON_WIDTH 40.0f
 #define MARK_BUTTON_WIDTH 40.0f
@@ -71,7 +73,7 @@
 	{
 		CGFloat viewWidth = self.bounds.size.width;
 
-		CGFloat titleX = BUTTON_X; CGFloat titleWidth = (viewWidth - (titleX + titleX));
+		CGFloat titleX = BUTTON_X; CGFloat titleWidth = (viewWidth - titleX);
 
 		CGFloat leftButtonX = BUTTON_X; // Left button start X position
 
@@ -80,6 +82,7 @@
 		UIButton *doneButton = [UIButton buttonWithType:UIButtonTypeSystem];
 
 		doneButton.frame = CGRectMake(leftButtonX, BUTTON_Y, DONE_BUTTON_WIDTH, BUTTON_HEIGHT);
+        doneButton.tintColor = [UIColor colorWithHexString:BAR_TINT_COLOR];
 		[doneButton setTitle:NSLocalizedString(@"Done", @"button") forState:UIControlStateNormal];
 
 		[doneButton addTarget:self action:@selector(doneButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
@@ -93,17 +96,21 @@
 
 #if (READER_ENABLE_THUMBS == TRUE) // Option
 
-		UIButton *thumbsButton = [UIButton buttonWithType:UIButtonTypeCustom];
+		UIButton *thumbsButton = [UIButton buttonWithType:UIButtonTypeSystem];
+		CGFloat rightButtonX = viewWidth; // Right button start X position
+		rightButtonX -= (THUMBS_BUTTON_WIDTH + BUTTON_SPACE);
 
-		thumbsButton.frame = CGRectMake(leftButtonX, BUTTON_Y, THUMBS_BUTTON_WIDTH, BUTTON_HEIGHT);
-		[thumbsButton setImage:[UIImage imageNamed:@"Reader-Thumbs"] forState:UIControlStateNormal];
+        
+		thumbsButton.frame = CGRectMake(rightButtonX, BUTTON_Y, THUMBS_BUTTON_WIDTH, BUTTON_HEIGHT);
+        thumbsButton.tintColor = [UIColor colorWithHexString:BAR_TINT_COLOR];
+        [thumbsButton setTitle:NSLocalizedString(@"Contents", @"button") forState:UIControlStateNormal];
+        
 		[thumbsButton addTarget:self action:@selector(thumbsButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-		thumbsButton.autoresizingMask = UIViewAutoresizingNone;
 		thumbsButton.exclusiveTouch = YES;
 
 		[self addSubview:thumbsButton]; //leftButtonX += (THUMBS_BUTTON_WIDTH + BUTTON_SPACE);
 
-		titleX += (THUMBS_BUTTON_WIDTH + BUTTON_SPACE); titleWidth -= (THUMBS_BUTTON_WIDTH + BUTTON_SPACE);
+		titleWidth -= (THUMBS_BUTTON_WIDTH + BUTTON_SPACE);
 
 #endif // end of READER_ENABLE_THUMBS Option
 
@@ -120,14 +127,14 @@
 		UIButton *flagButton = [UIButton buttonWithType:UIButtonTypeCustom];
 
 		flagButton.frame = CGRectMake(rightButtonX, BUTTON_Y, MARK_BUTTON_WIDTH, BUTTON_HEIGHT);
-		//[flagButton setImage:[UIImage imageNamed:@"Reader-Mark-N"] forState:UIControlStateNormal];
 		[flagButton addTarget:self action:@selector(markButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
 		[flagButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
 		[flagButton setBackgroundImage:buttonN forState:UIControlStateNormal];
 		flagButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
 		flagButton.exclusiveTouch = YES;
 
-		[self addSubview:flagButton]; titleWidth -= (MARK_BUTTON_WIDTH + BUTTON_SPACE);
+		[self addSubview:flagButton];
+        titleWidth -= (MARK_BUTTON_WIDTH + BUTTON_SPACE);
 
 		markButton = flagButton; markButton.enabled = NO; markButton.tag = NSIntegerMin;
 
@@ -156,7 +163,8 @@
 				emailButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
 				emailButton.exclusiveTouch = YES;
 
-				[self addSubview:emailButton]; titleWidth -= (EMAIL_BUTTON_WIDTH + BUTTON_SPACE);
+				[self addSubview:emailButton];
+                titleWidth -= (EMAIL_BUTTON_WIDTH + BUTTON_SPACE);
 			}
 		}
 
@@ -182,7 +190,8 @@
 				printButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
 				printButton.exclusiveTouch = YES;
 
-				[self addSubview:printButton]; titleWidth -= (PRINT_BUTTON_WIDTH + BUTTON_SPACE);
+				[self addSubview:printButton];
+                titleWidth -= (PRINT_BUTTON_WIDTH + BUTTON_SPACE);
 			}
 		}
 
@@ -204,7 +213,7 @@
 			titleLabel.shadowOffset = CGSizeMake(0.0f, 1.0f);
 			titleLabel.adjustsFontSizeToFitWidth = YES;
 			titleLabel.minimumScaleFactor = 0.75f;
-			titleLabel.text = [object.fileName stringByDeletingPathExtension];
+			titleLabel.text = object.title;
 
 			[self addSubview:titleLabel]; 
 		}

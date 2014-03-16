@@ -115,19 +115,17 @@
 
     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
         // Background is 64px high: in iOS7, it will be used as the background for the status bar as well.
-        [navigationBar setTintColor:[UIColor colorWithHexString:ISSUES_ACTION_BUTTON_BACKGROUND_COLOR]];
-        [navigationBar setBarTintColor:[UIColor colorWithHexString:@"ffffff"]];
-        [navigationBar setBackgroundImage:[UIImage imageNamed:@"navigation-bar-bg"] forBarMetrics:UIBarMetricsDefault];
+        navigationBar.tintColor = [UIColor colorWithHexString:BAR_TINT_COLOR ];
+        navigationBar.barTintColor = [UIColor colorWithHexString:BAR_BACKGROUND_COLOR ];
         navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor colorWithHexString:@"000000"] forKey:NSForegroundColorAttributeName];
     } else {
         // Background is 44px: in iOS6 and below, a higher background image would make the navigation bar
         // appear higher than it should be.
-        [navigationBar setBackgroundImage:[UIImage imageNamed:@"navigation-bar-bg-ios6"] forBarMetrics:UIBarMetricsDefault];
-        [navigationBar setTintColor:[UIColor colorWithHexString:@"333333"]]; // black will not trigger a pushed status
+        [navigationBar setTintColor:[UIColor colorWithHexString:BAR_TINT_COLOR]]; // black will not trigger a pushed status
     }
 
     self.window = [[[InterceptorWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor colorWithHexString:BAR_BACKGROUND_COLOR];
 
     self.window.rootViewController = self.rootNavigationController;
     [self.window makeKeyAndVisible];

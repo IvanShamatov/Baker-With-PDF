@@ -68,4 +68,9 @@
     // Progress bar for issues that are being downloaded in the shelf
     #define ISSUES_PROGRESSBAR_TINT_COLOR @"#bc242a"
 
+    //Navigation bar
+    #define BAR_BACKGROUND_COLOR @"#ffffff"
+    #define BAR_TINT_COLOR @"#bc242a"
+
+
 #endif

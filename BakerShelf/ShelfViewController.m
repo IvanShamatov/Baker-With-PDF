@@ -640,8 +640,7 @@
     NSString *status = [issue getStatus];
 
     if ([status isEqual:@"opening"]) {
-        ReaderDocument *document = [ReaderDocument withDocumentFilePath:issue.location password:nil];
-        
+        ReaderDocument *document = [ReaderDocument withDocumentFilePath:issue.location title:issue.title password:nil];
         if (document != nil) {
             ReaderViewController *readerViewController = [[ReaderViewController alloc] initWithReaderDocument:document];
             

@@ -49,7 +49,7 @@
 
 	NSURL *_fileURL;
     
-    NSString *_realName;
+    NSString *_title;
 }
 
 #pragma mark Properties
@@ -62,7 +62,7 @@
 @synthesize bookmarks = _bookmarks;
 @synthesize lastOpen = _lastOpen;
 @synthesize password = _password;
-@synthesize realName = _realName;
+@synthesize title  = _title;
 @dynamic fileName, fileURL;
 
 #pragma mark ReaderDocument class methods
@@ -129,7 +129,7 @@
 	return [archivePath stringByAppendingPathComponent:archiveName]; // "{archivePath}/'filename'.plist"
 }
 
-+ (ReaderDocument *)unarchiveFromFileName:(NSString *)filename password:(NSString *)phrase
++ (ReaderDocument *)unarchiveFromFileName:(NSString *)filename title:(NSString *)title password:(NSString *)phrase
 {
 	ReaderDocument *document = nil; // ReaderDocument object
 
@@ -156,15 +156,15 @@
 	return document;
 }
 
-+ (ReaderDocument *)withDocumentFilePath:(NSString *)filePath password:(NSString *)phrase
++ (ReaderDocument *)withDocumentFilePath:(NSString *)filePath title:(NSString *)title password:(NSString *)phrase
 {
 	ReaderDocument *document = nil; // ReaderDocument object
 
-	document = [ReaderDocument unarchiveFromFileName:filePath password:phrase];
+	document = [ReaderDocument unarchiveFromFileName:filePath title:title password:phrase];
 
 	if (document == nil) // Unarchive failed so we create a new ReaderDocument object
 	{
-		document = [[ReaderDocument alloc] initWithFilePath:filePath password:phrase];
+		document = [[ReaderDocument alloc] initWithFilePath:filePath title:title password:phrase];
 	}
 
 	return document;
@@ -197,7 +197,7 @@
 
 #pragma mark ReaderDocument instance methods
 
-- (id)initWithFilePath:(NSString *)fullFilePath password:(NSString *)phrase
+- (id)initWithFilePath:(NSString *)fullFilePath title:(NSString *)title password:(NSString *)phrase
 {
 	id object = nil; // ReaderDocument object
 
@@ -214,6 +214,8 @@
 			_pageNumber = [NSNumber numberWithInteger:1]; // Start on page 1
 
 			_fileName = [ReaderDocument relativeFilePath:fullFilePath]; // File name
+            
+            _title = [title copy];
 
 			CFURLRef docURLRef = (__bridge CFURLRef)[self fileURL]; // CFURLRef from NSURL
 
@@ -325,6 +327,8 @@
 	[encoder encodeObject:_fileSize forKey:@"FileSize"];
 
 	[encoder encodeObject:_lastOpen forKey:@"LastOpen"];
+    
+    [encoder encodeObject:_title forKey:@"Title"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder
@@ -346,6 +350,8 @@
 		_fileSize = [decoder decodeObjectForKey:@"FileSize"];
 
 		_lastOpen = [decoder decodeObjectForKey:@"LastOpen"];
+        
+        _title = [decoder decodeObjectForKey:@"Title"];
 
 		if (_guid == nil) _guid = [ReaderDocument GUID];
 

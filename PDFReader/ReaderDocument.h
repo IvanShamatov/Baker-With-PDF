@@ -37,13 +37,13 @@
 @property (nonatomic, strong, readonly) NSString *fileName;
 @property (nonatomic, strong, readonly) NSString *password;
 @property (nonatomic, strong, readonly) NSURL *fileURL;
-@property (nonatomic, strong, readonly) NSString *realName;
+@property (nonatomic, strong, readonly) NSString *title;
 
-+ (ReaderDocument *)withDocumentFilePath:(NSString *)filename password:(NSString *)phrase;
++ (ReaderDocument *)withDocumentFilePath:(NSString *)filename title:(NSString *)title password:(NSString *)phrase;
 
-+ (ReaderDocument *)unarchiveFromFileName:(NSString *)filename password:(NSString *)phrase;
++ (ReaderDocument *)unarchiveFromFileName:(NSString *)filename title:(NSString *)title password:(NSString *)phrase;
 
-- (id)initWithFilePath:(NSString *)fullFilePath password:(NSString *)phrase;
+- (id)initWithFilePath:(NSString *)fullFilePath title:(NSString *)title password:(NSString *)phrase;
 
 - (void)saveReaderDocument;
 
