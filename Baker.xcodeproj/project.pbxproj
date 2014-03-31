@@ -281,10 +281,10 @@
 		ABAFB58A15AB9A2E002FA498 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ABD245521639E3650080F056 /* AVFoundation.framework */,
 				F92D438118D0C8BD0063F052 /* ImageIO.framework */,
 				AB67F5BB16EE9B79005A04F6 /* SystemConfiguration.framework */,
 				ABABF1A51646C04D00A75E67 /* StoreKit.framework */,
-				ABD245521639E3650080F056 /* AVFoundation.framework */,
 				AB5D48CD1609176A00828D16 /* NewsstandKit.framework */,
 				ABAFB58B15AB9A2E002FA498 /* UIKit.framework */,
 				ABAFB58D15AB9A2E002FA498 /* Foundation.framework */,

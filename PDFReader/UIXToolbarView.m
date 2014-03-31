@@ -26,6 +26,8 @@
 #import "UIXToolbarView.h"
 
 #import <QuartzCore/QuartzCore.h>
+#import "UIColor+Extensions.h"
+#import "UIConstants.h"
 
 @implementation UIXToolbarView
 
@@ -51,6 +53,7 @@
 		self.contentMode = UIViewContentModeRedraw;
 		self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 		self.backgroundColor = [UIColor colorWithWhite:1.0f alpha:0.95f];
+        self.tintColor = [UIColor colorWithHexString:BAR_TINT_COLOR];
 
 		CGRect shadowRect = self.bounds; shadowRect.origin.y += shadowRect.size.height; shadowRect.size.height = SHADOW_HEIGHT;
 
