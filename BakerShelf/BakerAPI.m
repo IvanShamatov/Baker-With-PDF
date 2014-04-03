@@ -200,7 +200,7 @@
     if (error) {
         NSLog(@"[ERROR] Failed POST request to %@: %@", [request URL], [error localizedDescription]);
         return NO;
-    } else if ([response statusCode] == 200) {
+    } else if (([response statusCode] == 200) || ([response statusCode] == 201)) {
         return YES;
     } else {
         NSLog(@"[ERROR] Failed POST request to %@: response was %d %@",
