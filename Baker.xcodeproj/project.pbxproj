@@ -63,6 +63,10 @@
 		F92D438818D0F9230063F052 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F92D438718D0F9230063F052 /* Utils.m */; };
 		F95E006B18D1830A0025ED95 /* InterceptorWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F95E006A18D1830A0025ED95 /* InterceptorWindow.m */; };
 		F95E006E18D1880B0025ED95 /* InfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F95E006D18D1880B0025ED95 /* InfoTableViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		F9DF237418E9A2BA0002B5EC /* InfoTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DF237318E9A2BA0002B5EC /* InfoTextViewController.m */; };
+		F9DF237818E9A3560002B5EC /* TermsOfSubscription.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9DF237518E9A3560002B5EC /* TermsOfSubscription.txt */; };
+		F9DF237918E9A3560002B5EC /* PrivacyPolicy.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9DF237618E9A3560002B5EC /* PrivacyPolicy.txt */; };
+		F9DF237A18E9A3560002B5EC /* TermsAndConditions.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9DF237718E9A3560002B5EC /* TermsAndConditions.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -169,6 +173,11 @@
 		F95E006A18D1830A0025ED95 /* InterceptorWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterceptorWindow.m; sourceTree = "<group>"; };
 		F95E006C18D1880B0025ED95 /* InfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewController.h; sourceTree = "<group>"; };
 		F95E006D18D1880B0025ED95 /* InfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTableViewController.m; sourceTree = "<group>"; };
+		F9DF237218E9A2BA0002B5EC /* InfoTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTextViewController.h; sourceTree = "<group>"; };
+		F9DF237318E9A2BA0002B5EC /* InfoTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTextViewController.m; sourceTree = "<group>"; };
+		F9DF237518E9A3560002B5EC /* TermsOfSubscription.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TermsOfSubscription.txt; sourceTree = "<group>"; };
+		F9DF237618E9A3560002B5EC /* PrivacyPolicy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PrivacyPolicy.txt; sourceTree = "<group>"; };
+		F9DF237718E9A3560002B5EC /* TermsAndConditions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TermsAndConditions.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +263,8 @@
 				F95E006A18D1830A0025ED95 /* InterceptorWindow.m */,
 				F95E006C18D1880B0025ED95 /* InfoTableViewController.h */,
 				F95E006D18D1880B0025ED95 /* InfoTableViewController.m */,
+				F9DF237218E9A2BA0002B5EC /* InfoTextViewController.h */,
+				F9DF237318E9A2BA0002B5EC /* InfoTextViewController.m */,
 			);
 			path = BakerShelf;
 			sourceTree = "<group>";
@@ -311,6 +322,9 @@
 		ABAFB59215AB9A2E002FA498 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F9DF237518E9A3560002B5EC /* TermsOfSubscription.txt */,
+				F9DF237618E9A3560002B5EC /* PrivacyPolicy.txt */,
+				F9DF237718E9A3560002B5EC /* TermsAndConditions.txt */,
 				20CC551F16AD346900DEFB5C /* Localizable.strings */,
 				BF3CCC9D15D080560087B9CA /* icon */,
 				ABAFB59315AB9A2E002FA498 /* Baker-Info.plist */,
@@ -424,7 +438,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9DF237818E9A3560002B5EC /* TermsOfSubscription.txt in Resources */,
+				F9DF237918E9A3560002B5EC /* PrivacyPolicy.txt in Resources */,
 				BF78D1B0180C8F070093DFBC /* BakerAssets.xcassets in Resources */,
+				F9DF237A18E9A3560002B5EC /* TermsAndConditions.txt in Resources */,
 				20CC551D16AD346900DEFB5C /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +496,7 @@
 				ABF23B1D1708418E003AA3B0 /* BakerAPI.m in Sources */,
 				BFAB78D317B2A67E00E91ADE /* BakerAnalyticsEvents.m in Sources */,
 				F92D438018D0C65D0063F052 /* UIXToolbarView.m in Sources */,
+				F9DF237418E9A2BA0002B5EC /* InfoTextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

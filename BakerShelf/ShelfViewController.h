@@ -40,6 +40,7 @@
 #import "ReaderViewController.h"
 #import "PurchasesManager.h"
 #import "InfoTableViewController.h"
+#import "InfoTextViewController.h"
 
 @interface ShelfViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UIActionSheetDelegate, UIWebViewDelegate, ReaderViewControllerDelegate, InfoTableViewControllerDelegate> {
     BakerAPI *api;

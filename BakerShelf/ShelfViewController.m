@@ -763,7 +763,9 @@
 }
 
 - (void)infoTableViewControllerDelegatePushViewWithFile:(NSString *)file{
-    
+    InfoTextViewController *textView;
+    textView = [[InfoTextViewController alloc] initWithTextFile:file];
+    [self.navigationController pushViewController:textView animated:YES];
 }
 
 @end
