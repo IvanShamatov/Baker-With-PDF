@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>327BFADF-EE4F-487B-BECD-5F7EED3A9E2B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Baker</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>519BAFEC-210F-4E9F-ADA0-94E6D1186E3E</key>
+		<string>ssh://github.com/IvanShamatov/baker.git</string>
+		<key>FA54A1F6-8456-46A9-9F36-B75D89EB156C</key>
+		<string>https://github.com/bakerframework/baker.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Baker.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>519BAFEC-210F-4E9F-ADA0-94E6D1186E3E</key>
+		<string>../..</string>
+		<key>FA54A1F6-8456-46A9-9F36-B75D89EB156C</key>
+		<string>../../../baker</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/bakerframework/baker.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>519BAFEC-210F-4E9F-ADA0-94E6D1186E3E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FA54A1F6-8456-46A9-9F36-B75D89EB156C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>baker</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>519BAFEC-210F-4E9F-ADA0-94E6D1186E3E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ISbaker</string>
+		</dict>
+	</array>
+</dict>
+</plist>
