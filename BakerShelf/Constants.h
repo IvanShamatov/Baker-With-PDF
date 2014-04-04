@@ -47,25 +47,25 @@
         // Mandatory - This constant defines where the JSON file containing all the publications is located.
         // For more information on this file, see: https://github.com/Simbul/baker/wiki/Newsstand-shelf-JSON
         // E.g. @"http://example.com/shelf.json"
-        #define NEWSSTAND_MANIFEST_URL @"http://localhost:3000/:app_id/issues"
+        #define NEWSSTAND_MANIFEST_URL @"http://192.168.1.110:3000/:app_id/issues"
 
         // ----------------------------------------------------------------------------------------------------
         // Optional - This constant specifies the URL to ping back when a user purchases an issue or a subscription.
         // For more information, see: https://github.com/Simbul/baker/wiki/Baker-Server-API
         // E.g. @"http://example.com/purchased"
-        #define PURCHASE_CONFIRMATION_URL @"http://localhost:3000/:app_id/purchases/:user_id"
+        #define PURCHASE_CONFIRMATION_URL @"http://192.168.1.110:3000/:app_id/purchases/:user_id"
 
         // ----------------------------------------------------------------------------------------------------
         // Optional - This constant specifies a URL that will be used to retrieve the list of purchased issues.
         // For more information, see: https://github.com/Simbul/baker/wiki/Baker-Server-API
         // E.g. @"http://example.com/purchases"
-        #define PURCHASES_URL @"http://localhost:3000/:app_id/purchases/:user_id"
+        #define PURCHASES_URL @"http://192.168.1.110:3000/:app_id/purchases/:user_id"
 
         // ----------------------------------------------------------------------------------------------------
         // Optional - This constant specifies the URL to ping back when a user enables push notifications.
         // For more information, see: https://github.com/Simbul/baker/wiki/Baker-Server-API
         // E.g. @"http://example.com/post_apns_token"
-        #define POST_APNS_TOKEN_URL @"http://localhost:3000/:app_id/tokens/:user_id"
+        #define POST_APNS_TOKEN_URL @"http://192.168.1.110:3000/:app_id/tokens/:user_id"
 
         // ----------------------------------------------------------------------------------------------------
         // Mandatory - The following two constants identify the subscriptions you set up in iTunesConnect.
@@ -83,7 +83,8 @@
         //     @"com.example.MyBook.subscription.6months", \
         //     nil]
         #define AUTO_RENEWABLE_SUBSCRIPTION_PRODUCT_IDS [NSArray arrayWithObjects: \
-            nil]
+                @"com.openpublishingagency.ISBaker.1year", \
+                nil]
 
     #endif
 

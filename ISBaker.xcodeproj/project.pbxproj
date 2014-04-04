@@ -97,13 +97,13 @@
 		ABABF1A51646C04D00A75E67 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		ABADF3F716C7BAD900F52F3C /* NSURL+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Extensions.h"; sourceTree = "<group>"; };
 		ABADF3F816C7BAD900F52F3C /* NSURL+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Extensions.m"; sourceTree = "<group>"; };
-		ABAFB58715AB9A2E002FA498 /* Baker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABAFB58715AB9A2E002FA498 /* ISBaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISBaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAFB58B15AB9A2E002FA498 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ABAFB58D15AB9A2E002FA498 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ABAFB58F15AB9A2E002FA498 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		ABAFB59315AB9A2E002FA498 /* Baker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Baker-Info.plist"; sourceTree = "<group>"; };
+		ABAFB59315AB9A2E002FA498 /* ISBaker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ISBaker-Info.plist"; sourceTree = "<group>"; };
 		ABAFB59715AB9A2E002FA498 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		ABAFB59915AB9A2E002FA498 /* Baker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Baker-Prefix.pch"; sourceTree = "<group>"; };
+		ABAFB59915AB9A2E002FA498 /* ISBaker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ISBaker-Prefix.pch"; sourceTree = "<group>"; };
 		ABAFB59A15AB9A2E002FA498 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ABAFB59B15AB9A2E002FA498 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		ABBFD8F016C6614300BA64A4 /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
@@ -284,7 +284,7 @@
 		ABAFB58815AB9A2E002FA498 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ABAFB58715AB9A2E002FA498 /* Baker.app */,
+				ABAFB58715AB9A2E002FA498 /* ISBaker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -327,9 +327,9 @@
 				F9DF237718E9A3560002B5EC /* TermsAndConditions.txt */,
 				20CC551F16AD346900DEFB5C /* Localizable.strings */,
 				BF3CCC9D15D080560087B9CA /* icon */,
-				ABAFB59315AB9A2E002FA498 /* Baker-Info.plist */,
+				ABAFB59315AB9A2E002FA498 /* ISBaker-Info.plist */,
 				ABAFB59715AB9A2E002FA498 /* main.m */,
-				ABAFB59915AB9A2E002FA498 /* Baker-Prefix.pch */,
+				ABAFB59915AB9A2E002FA498 /* ISBaker-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -391,9 +391,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ABAFB58615AB9A2E002FA498 /* Baker */ = {
+		ABAFB58615AB9A2E002FA498 /* ISBaker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ABAFB5B415AB9A2F002FA498 /* Build configuration list for PBXNativeTarget "Baker" */;
+			buildConfigurationList = ABAFB5B415AB9A2F002FA498 /* Build configuration list for PBXNativeTarget "ISBaker" */;
 			buildPhases = (
 				ABAFB58315AB9A2E002FA498 /* Sources */,
 				ABAFB58415AB9A2E002FA498 /* Frameworks */,
@@ -403,9 +403,9 @@
 			);
 			dependencies = (
 			);
-			name = Baker;
+			name = ISBaker;
 			productName = Baker;
-			productReference = ABAFB58715AB9A2E002FA498 /* Baker.app */;
+			productReference = ABAFB58715AB9A2E002FA498 /* ISBaker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -415,8 +415,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
+				TargetAttributes = {
+					ABAFB58615AB9A2E002FA498 = {
+						DevelopmentTeam = LR5ZCABH74;
+					};
+				};
 			};
-			buildConfigurationList = ABAFB58115AB9A2E002FA498 /* Build configuration list for PBXProject "Baker" */;
+			buildConfigurationList = ABAFB58115AB9A2E002FA498 /* Build configuration list for PBXProject "ISBaker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -428,7 +433,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ABAFB58615AB9A2E002FA498 /* Baker */,
+				ABAFB58615AB9A2E002FA498 /* ISBaker */,
 			);
 		};
 /* End PBXProject section */
@@ -581,11 +586,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ivan Shamatov (D7BK746J79)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Baker/Baker-Prefix.pch";
-				INFOPLIST_FILE = "Baker/Baker-Info.plist";
+				GCC_PREFIX_HEADER = "Baker/ISBaker-Prefix.pch";
+				INFOPLIST_FILE = "Baker/ISBaker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ISBaker;
+				PROVISIONING_PROFILE = "60EC9A56-EE39-468C-91D1-01A95D444399";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -596,11 +603,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Baker/Baker-Prefix.pch";
-				INFOPLIST_FILE = "Baker/Baker-Info.plist";
+				GCC_PREFIX_HEADER = "Baker/ISBaker-Prefix.pch";
+				INFOPLIST_FILE = "Baker/ISBaker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ISBaker;
+				PROVISIONING_PROFILE = "60EC9A56-EE39-468C-91D1-01A95D444399";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -609,7 +618,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ABAFB58115AB9A2E002FA498 /* Build configuration list for PBXProject "Baker" */ = {
+		ABAFB58115AB9A2E002FA498 /* Build configuration list for PBXProject "ISBaker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ABAFB5B215AB9A2F002FA498 /* Debug */,
@@ -618,7 +627,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ABAFB5B415AB9A2F002FA498 /* Build configuration list for PBXNativeTarget "Baker" */ = {
+		ABAFB5B415AB9A2F002FA498 /* Build configuration list for PBXNativeTarget "ISBaker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ABAFB5B515AB9A2F002FA498 /* Debug */,
