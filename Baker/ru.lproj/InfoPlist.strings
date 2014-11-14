@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  ISBaker
+
+  Created by Шаматов Иван on 28.10.14.
+
+*/
+"CFBundleDisplayName" = "Марафонец";
+"CFBundleName" = "Марафонец";

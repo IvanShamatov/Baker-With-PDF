@@ -10,29 +10,29 @@
 	<string>ISBaker</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>97A808AD-FD31-453C-9599-B84A29A8B28F</key>
-		<string>ssh://github.com/IvanShamatov/baker.git</string>
+		<key>482A922F308FB7C409D53544D2F6481C8BFEE75D</key>
+		<string>github.com:IvanShamatov/baker.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ISBaker.xcodeproj/project.xcworkspace</string>
+	<string>ISBaker.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>97A808AD-FD31-453C-9599-B84A29A8B28F</key>
+		<key>482A922F308FB7C409D53544D2F6481C8BFEE75D</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/IvanShamatov/baker.git</string>
+	<string>github.com:IvanShamatov/baker.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>97A808AD-FD31-453C-9599-B84A29A8B28F</string>
+	<string>482A922F308FB7C409D53544D2F6481C8BFEE75D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>97A808AD-FD31-453C-9599-B84A29A8B28F</string>
+			<string>482A922F308FB7C409D53544D2F6481C8BFEE75D</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ISbaker</string>
 		</dict>

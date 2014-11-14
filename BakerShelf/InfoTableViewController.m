@@ -31,10 +31,8 @@
     [super viewDidLoad];
     
     names = @[@"Terms of Subscription",
-              @"Terms and Conditions of Usage",
               @"Privacy Policy"];
     files = @[@"TermsOfSubscription",
-              @"TermsAndConditions",
               @"PrivacyPolicy"];
 }
 
@@ -65,7 +63,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = names[indexPath.section];
+    cell.textLabel.text = NSLocalizedString(names[indexPath.section], nil);
     return cell;
 }
 

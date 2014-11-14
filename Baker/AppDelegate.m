@@ -152,6 +152,7 @@
 
     BakerAPI *api = [BakerAPI sharedInstance];
     [api postAPNSToken:apnsToken];
+    NSLog(@"%@", apnsToken);
 }
 #endif
 

@@ -1,0 +1,111 @@
+
+// Shelf Navigation Title at the top of the main Issues List
+"SHELF_NAVIGATION_TITLE" = "";
+
+// Products alert
+"PRODUCTS_REQUEST_FAILED_TITLE" = "Не удалось подключиться к App Store";
+"PRODUCTS_REQUEST_FAILED_CLOSE" = "Закрыть";
+
+// Info button
+"INFO_BUTTON_TEXT" = "Инфо";
+
+// Subscription button
+"SUBSCRIBE_BUTTON_TEXT" = "Подписка";
+"SUBSCRIBE_BUTTON_DISABLED_TEXT" = "Подписываемся...";
+"SUBSCRIBE_BUTTON_SUBSCRIBED_TEXT" = "Подписка оформлена";
+
+"SUBSCRIPTIONS_SHEET_FREE" = "Бесплатная подписка";
+"SUBSCRIPTIONS_SHEET_RESTORE" = "Восстановить покупки";
+"SUBSCRIPTIONS_SHEET_CLOSE" = "Закрыть";
+
+"SUBSCRIPTIONS_SHEET_GENERIC" = "Варианты подписки";
+"SUBSCRIPTIONS_SHEET_SUBSCRIBED" = "Подписка оформлена";
+"SUBSCRIPTIONS_SHEET_NOT_SUBSCRIBED" = "Подписка не оформлена";
+
+// Subscription alerts
+"SUBSCRIPTION_SUCCESSFUL_TITLE" = "Подписка";
+"SUBSCRIPTION_SUCCESSFUL_MESSAGE" = "Успешно оформленная подписка";
+"SUBSCRIPTION_SUCCESSFUL_CLOSE" = "Закрыть";
+"SUBSCRIPTION_FAILED_TITLE" = "Подписка не оформлена";
+"SUBSCRIPTION_FAILED_CLOSE" = "Закрыть";
+
+// Issue purchase alerts
+"ISSUE_PURCHASE_SUCCESSFUL_TITLE" = "Purchase successful";
+"ISSUE_PURCHASE_SUCCESSFUL_MESSAGE" = "You have successfully purchased %@";
+"ISSUE_PURCHASE_SUCCESSFUL_CLOSE" = "Close";
+"ISSUE_PURCHASE_FAILED_TITLE" = "Purchase failure";
+"ISSUE_PURCHASE_FAILED_CLOSE" = "Close";
+
+// Restore alerts
+"RESTORE_FAILED_TITLE" = "Восстановление";
+"RESTORE_FAILED_CLOSE" = "Закрыть";
+
+"RESTORED_ISSUE_NOT_RECOGNISED_TITLE" = "Некоторые номера не удалось восстановить";
+"RESTORED_ISSUE_NOT_RECOGNISED_MESSAGE" = "Данные номера не удалось найти:\n%@.\n\nОбратитесь к издателю.";
+"RESTORED_ISSUE_NOT_RECOGNISED_CLOSE" = "Закрыть";
+
+// Download alert
+"DOWNLOAD_FAILED_TITLE" = "Неудачная загрузка";
+"DOWNLOAD_FAILED_MESSAGE" = "Этот номер не удалось скачать";
+"DOWNLOAD_FAILED_CLOSE" = "Закрыть";
+
+// Unzip alert
+"UNZIP_FAILED_TITLE" = "Неудачная попытка";
+"UNZIP_FAILED_MESSAGE" = "Этот номер не удалось открыть";
+"UNZIP_FAILED_CLOSE" = "Закрыть";
+
+// Connection alert
+"INTERNET_CONNECTION_UNAVAILABLE_TITLE" = "Нет интернет соединения";
+"INTERNET_CONNECTION_UNAVAILABLE_MESSAGE" = "Проблемы с сетью, невозможно подключение к интернет.";
+"INTERNET_CONNECTION_UNAVAILABLE_CLOSE" = "OK";
+
+// Issue buttons
+"ACTION_REMOTE_TEXT" = "СКАЧАТЬ";
+"ACTION_DOWNLOADED_TEXT" = "ЧИТАТЬ";
+"ACTION_BUY_TEXT" = "КУПИТЬ";
+"ARCHIVE_TEXT" = "УДАЛИТЬ";
+"CONNECTING_TEXT" = "ПОДКЛЮЧЕНИЕ...";
+"DOWNLOADING_TEXT" = "ЗАГРУЗКА...";
+"OPENING_TEXT" = "Загружаем...";
+"BUYING_TEXT" = "ПОКУПКА...";
+"RETRIEVING_TEXT" = "ПОЛУЧЕНИЕ ЦЕНЫ...";
+
+// Issue states
+"FREE_TEXT" = "БЕСПЛАТНО";
+"PURCHASED_TEXT" = "КУПЛЕНО";
+
+// Archiving alert
+"ARCHIVE_ALERT_TITLE" = "Вы уверены, что хотите удалить этот номер?";
+"ARCHIVE_ALERT_MESSAGE" = "Этот номер будет удален с вашего устройства. Но вы сможете скачать его позднее бесплатно";
+"ARCHIVE_ALERT_BUTTON_CANCEL" = "Отмена";
+"ARCHIVE_ALERT_BUTTON_OK" = "Да, удалить";
+
+// Mail alert
+"MAILTO_ALERT_TITLE" = "Неудача";
+"MAILTO_ALERT_MESSAGE" = "Ваше устройство не поддерживает отправку email'ов!";
+"MAILTO_ALERT_CLOSE" = "OK";
+
+// Modal web view
+"WEB_MODAL_FAILURE_MESSAGE" = "Невозможно подключиться";
+"WEB_MODAL_CLOSE_BUTTON_TEXT" = "Назад";
+
+// Transaction recording alert
+"TRANSACTION_RECORDING_FAILED_TITLE" = "Невозможно подтвердить транзакцию на сервере";
+"TRANSACTION_RECORDING_FAILED_MESSAGE" = "Операция будет продолжать попытки, до успеха";
+"TRANSACTION_RECORDING_FAILED_CLOSE" = "Закрыть";
+
+// Issue opening failure alert
+"ISSUE_OPENING_FAILED_TITLE" = "Не открыть номре";
+"ISSUE_OPENING_FAILED_MESSAGE" = "Возникла ошибка во время открытия номера. Попробуйте скачать его опять или связаться с издателем";
+"ISSUE_OPENING_FAILED_CLOSE" = "Закрыть";
+
+// Subscriptions
+// (These are just examples: you'll need to provide your own product IDs and names)
+//"com.example.MyBook.subscription.3months" = "3 Months Subscription";
+"com.openpublishingagency.maraphonec.free" = "Бесплатная подписка";
+
+"Contents" = "Контент";
+"Done" = "Готово";
+//"Contents" = "Contents";
+"Terms of Subscription" = "Условия подписки";
+"Privacy Policy" = "Политика конфиденциальности";

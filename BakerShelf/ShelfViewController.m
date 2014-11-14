@@ -159,8 +159,10 @@
 
     [self.view addSubview:self.background];
     [self.view addSubview:self.gridView];
-
-    [self willRotateToInterfaceOrientation:self.interfaceOrientation duration:0];
+    
+    if (!SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")) {
+        [self willRotateToInterfaceOrientation:self.interfaceOrientation duration:0];
+    }
     [self.gridView reloadData];
 
     #ifdef BAKER_NEWSSTAND
@@ -200,8 +202,11 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar setTranslucent:NO];
-    [self willRotateToInterfaceOrientation:self.interfaceOrientation duration:0];
-
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")) {
+        
+    } else {
+        [self willRotateToInterfaceOrientation:self.interfaceOrientation duration:0];
+    }
     for (IssueViewController *controller in self.issueViewControllers) {
         controller.issue.transientStatus = BakerIssueTransientStatusNone;
         [controller refresh];
@@ -244,41 +249,76 @@
 }
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-    int width  = 0;
-    int height = 0;
-
-    NSString *image = @"";
-    CGSize size = [UIScreen mainScreen].bounds.size;
-    int landscapePadding = 0;
-
-    if (UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
-        width  = size.width;
-        height = size.height - 64;
-        image  = @"shelf-bg-portrait";
-    } else if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)) {
-        width  = size.height;
-        height = size.width - 64;
-        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-            height = height + 12;
+    if (!SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")) {
+        int width  = 0;
+        int height = 0;
+        
+        NSString *image = @"";
+        CGSize size = [UIScreen mainScreen].bounds.size;
+        int landscapePadding = 0;
+        
+        if (UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
+            width  = size.width;
+            height = size.height - 64;
+            image  = @"shelf-bg-portrait";
+        } else if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)) {
+            width  = size.height;
+            height = size.width - 64;
+            if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+                height = height + 12;
+            }
+            image  = @"shelf-bg-landscape";
+            CGFloat cellWidth = [IssueViewController getIssueCellSize].width;
+            landscapePadding = width / 4 - cellWidth / 2;
         }
-        image  = @"shelf-bg-landscape";
-        CGFloat cellWidth = [IssueViewController getIssueCellSize].width;
-        landscapePadding = width / 4 - cellWidth / 2;
+        
+        int bannerHeight = [ShelfViewController getBannerHeight];
+        
+        self.background.frame = CGRectMake(0, 0, width, height);
+        self.background.image = [UIImage imageNamed:image];
+        
+        self.gridView.frame = CGRectMake(landscapePadding, bannerHeight, width - 2 * landscapePadding, height - bannerHeight);
     }
-
-    if (size.height == 568) {
-        image = [NSString stringWithFormat:@"%@-568h", image];
-    } else {
-        image = [NSString stringWithFormat:@"%@", image];
-    }
-
-    int bannerHeight = [ShelfViewController getBannerHeight];
-
-    self.background.frame = CGRectMake(0, 0, width, height);
-    self.background.image = [UIImage imageNamed:image];
-
-    self.gridView.frame = CGRectMake(landscapePadding, bannerHeight, width - 2 * landscapePadding, height - bannerHeight);
 }
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")) {
+        int width  = 0;
+        int height = 0;
+        
+        NSString *image = @"";
+        CGSize size = [UIScreen mainScreen].bounds.size;
+        int landscapePadding = 0;
+        
+        if (size.width < size.height) {
+            width  = size.width;
+            height = size.height - 64;
+            image  = @"shelf-bg-portrait";
+        } else if (size.width > size.height) {
+            width  = size.width;
+            height = size.height - 64;
+            if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+                height = height + 12;
+            }
+            image  = @"shelf-bg-landscape";
+            CGFloat cellWidth = [IssueViewController getIssueCellSize].width;
+            landscapePadding = width / 4 - cellWidth / 2;
+        }
+        
+        int bannerHeight = [ShelfViewController getBannerHeight];
+        
+        self.background.frame = CGRectMake(0, 0, width, height);
+        self.background.image = [UIImage imageNamed:image];
+        
+        self.gridView.frame = CGRectMake(landscapePadding, bannerHeight, width - 2 * landscapePadding, height - bannerHeight);
+    }
+}
+
+
+
 - (IssueViewController *)createIssueViewControllerWithIssue:(BakerIssue *)issue
 {
     IssueViewController *controller = [[[IssueViewController alloc] initWithBakerIssue:issue] autorelease];

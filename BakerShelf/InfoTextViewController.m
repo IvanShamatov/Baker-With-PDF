@@ -38,6 +38,7 @@
     if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
         CGRect textViewContainer = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
         _textView = [[UITextView alloc] initWithFrame:textViewContainer];
+        _textView.editable = NO;
         NSString *content = [NSString stringWithContentsOfFile:filePath
                                                       encoding:NSUTF8StringEncoding
                                                          error:nil];

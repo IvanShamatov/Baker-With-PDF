@@ -63,6 +63,10 @@
 		F92D438818D0F9230063F052 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F92D438718D0F9230063F052 /* Utils.m */; };
 		F95E006B18D1830A0025ED95 /* InterceptorWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F95E006A18D1830A0025ED95 /* InterceptorWindow.m */; };
 		F95E006E18D1880B0025ED95 /* InfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F95E006D18D1880B0025ED95 /* InfoTableViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		F96D1D0719FF881800B02EC6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F96D1D0919FF881800B02EC6 /* InfoPlist.strings */; };
+		F96D1D0E19FF956D00B02EC6 /* newsstand-app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F96D1D0B19FF956D00B02EC6 /* newsstand-app-icon.png */; };
+		F96D1D0F19FF956D00B02EC6 /* newsstand-app-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F96D1D0C19FF956D00B02EC6 /* newsstand-app-icon@2x.png */; };
+		F96D1D1019FF956D00B02EC6 /* newsstand-app-icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F96D1D0D19FF956D00B02EC6 /* newsstand-app-icon@3x.png */; };
 		F9DF237418E9A2BA0002B5EC /* InfoTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DF237318E9A2BA0002B5EC /* InfoTextViewController.m */; };
 		F9DF237818E9A3560002B5EC /* TermsOfSubscription.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9DF237518E9A3560002B5EC /* TermsOfSubscription.txt */; };
 		F9DF237918E9A3560002B5EC /* PrivacyPolicy.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9DF237618E9A3560002B5EC /* PrivacyPolicy.txt */; };
@@ -173,6 +177,12 @@
 		F95E006A18D1830A0025ED95 /* InterceptorWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterceptorWindow.m; sourceTree = "<group>"; };
 		F95E006C18D1880B0025ED95 /* InfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewController.h; sourceTree = "<group>"; };
 		F95E006D18D1880B0025ED95 /* InfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTableViewController.m; sourceTree = "<group>"; };
+		F96D1D0819FF881800B02EC6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F96D1D0A19FF881A00B02EC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F96D1D0B19FF956D00B02EC6 /* newsstand-app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "newsstand-app-icon.png"; path = "Baker/BakerAssets.xcassets/newsstand-app-icon.imageset/newsstand-app-icon.png"; sourceTree = "<group>"; };
+		F96D1D0C19FF956D00B02EC6 /* newsstand-app-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "newsstand-app-icon@2x.png"; path = "Baker/BakerAssets.xcassets/newsstand-app-icon.imageset/newsstand-app-icon@2x.png"; sourceTree = "<group>"; };
+		F96D1D0D19FF956D00B02EC6 /* newsstand-app-icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "newsstand-app-icon@3x.png"; path = "Baker/BakerAssets.xcassets/newsstand-app-icon.imageset/newsstand-app-icon@3x.png"; sourceTree = "<group>"; };
+		F9DA96F919FE8EF400AAD23A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F9DF237218E9A2BA0002B5EC /* InfoTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTextViewController.h; sourceTree = "<group>"; };
 		F9DF237318E9A2BA0002B5EC /* InfoTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTextViewController.m; sourceTree = "<group>"; };
 		F9DF237518E9A3560002B5EC /* TermsOfSubscription.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TermsOfSubscription.txt; sourceTree = "<group>"; };
@@ -272,6 +282,9 @@
 		ABAFB57C15AB9A2E002FA498 = {
 			isa = PBXGroup;
 			children = (
+				F96D1D0B19FF956D00B02EC6 /* newsstand-app-icon.png */,
+				F96D1D0C19FF956D00B02EC6 /* newsstand-app-icon@2x.png */,
+				F96D1D0D19FF956D00B02EC6 /* newsstand-app-icon@3x.png */,
 				F92D434418D0C65D0063F052 /* PDFReader */,
 				BF78D1AF180C8F070093DFBC /* BakerAssets.xcassets */,
 				AB40047B15B4B8B800D87E2A /* BakerShelf */,
@@ -322,6 +335,7 @@
 		ABAFB59215AB9A2E002FA498 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F96D1D0919FF881800B02EC6 /* InfoPlist.strings */,
 				F9DF237518E9A3560002B5EC /* TermsOfSubscription.txt */,
 				F9DF237618E9A3560002B5EC /* PrivacyPolicy.txt */,
 				F9DF237718E9A3560002B5EC /* TermsAndConditions.txt */,
@@ -417,7 +431,7 @@
 				LastUpgradeCheck = 0510;
 				TargetAttributes = {
 					ABAFB58615AB9A2E002FA498 = {
-						DevelopmentTeam = LR5ZCABH74;
+						DevelopmentTeam = 662CAG2WLB;
 					};
 				};
 			};
@@ -427,6 +441,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ru,
 			);
 			mainGroup = ABAFB57C15AB9A2E002FA498;
 			productRefGroup = ABAFB58815AB9A2E002FA498 /* Products */;
@@ -444,10 +459,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9DF237818E9A3560002B5EC /* TermsOfSubscription.txt in Resources */,
+				F96D1D1019FF956D00B02EC6 /* newsstand-app-icon@3x.png in Resources */,
+				F96D1D0F19FF956D00B02EC6 /* newsstand-app-icon@2x.png in Resources */,
+				F96D1D0719FF881800B02EC6 /* InfoPlist.strings in Resources */,
 				F9DF237918E9A3560002B5EC /* PrivacyPolicy.txt in Resources */,
 				BF78D1B0180C8F070093DFBC /* BakerAssets.xcassets in Resources */,
 				F9DF237A18E9A3560002B5EC /* TermsAndConditions.txt in Resources */,
 				20CC551D16AD346900DEFB5C /* Localizable.strings in Resources */,
+				F96D1D0E19FF956D00B02EC6 /* newsstand-app-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,8 +531,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				20CC551E16AD346900DEFB5C /* en */,
+				F9DA96F919FE8EF400AAD23A /* ru */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		F96D1D0919FF881800B02EC6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F96D1D0819FF881800B02EC6 /* ru */,
+				F96D1D0A19FF881A00B02EC6 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -529,7 +558,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ivan Shamatov (D7BK746J79)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -586,13 +615,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ivan Shamatov (D7BK746J79)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Baker/ISBaker-Prefix.pch";
 				INFOPLIST_FILE = "Baker/ISBaker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = ISBaker;
-				PROVISIONING_PROFILE = "60EC9A56-EE39-468C-91D1-01A95D444399";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -603,13 +633,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Baker/ISBaker-Prefix.pch";
 				INFOPLIST_FILE = "Baker/ISBaker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = ISBaker;
-				PROVISIONING_PROFILE = "60EC9A56-EE39-468C-91D1-01A95D444399";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
