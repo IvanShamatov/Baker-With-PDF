@@ -281,6 +281,38 @@
     }
 }
 
+-(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    int width  = 0;
+    int height = 0;
+    NSLog(@"this method called");
+    NSString *image = @"";
+    int landscapePadding = 0;
+    UIInterfaceOrientation toInterfaceOrientation   = [[UIDevice currentDevice] orientation];
+    
+    if (UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
+        width  = size.width;
+        height = size.height - 64;
+        image  = @"shelf-bg-portrait";
+    } else if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)) {
+        width  = size.height;
+        height = size.width - 64;
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+            height = height + 12;
+        }
+        image  = @"shelf-bg-landscape";
+        CGFloat cellWidth = [IssueViewController getIssueCellSize].width;
+        landscapePadding = width / 4 - cellWidth / 2;
+    }
+    int bannerHeight = [ShelfViewController getBannerHeight];
+    
+    self.background.frame = CGRectMake(0, 0, width, height);
+    self.background.image = [UIImage imageNamed:image];
+    
+    self.gridView.frame = CGRectMake(landscapePadding, bannerHeight, width - 2 * landscapePadding, height - bannerHeight);
+    NSLog(@"\r\n%i\n%i", width-2*landscapePadding, height-bannerHeight);
+
+}
+
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
