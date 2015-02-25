@@ -11,7 +11,7 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>482A922F308FB7C409D53544D2F6481C8BFEE75D</key>
-		<string>github.com:IvanShamatov/baker.git</string>
+		<string>https://github.com/IvanShamatov/Baker-With-PDF.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ISBaker.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.com:IvanShamatov/baker.git</string>
+	<string>https://github.com/IvanShamatov/Baker-With-PDF.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>482A922F308FB7C409D53544D2F6481C8BFEE75D</string>
 			<key>IDESourceControlWCCName</key>
-			<string>ISbaker</string>
+			<string>Baker-With-PDF</string>
 		</dict>
 	</array>
 </dict>

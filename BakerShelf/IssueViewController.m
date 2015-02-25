@@ -729,13 +729,26 @@
         return 190;
     }
 }
+
++ (CGSize)screenSize {
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    if (SYSTEM_VERSION_LESS_THAN(@"8.0") && UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)) {
+        return CGSizeMake(screenSize.height, screenSize.width);
+    }
+    return screenSize;
+}
+
 + (CGSize)getIssueCellSize
 {
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGSize size = [IssueViewController screenSize];
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        return CGSizeMake((screenRect.size.width - 10) / 2, [IssueViewController getIssueCellHeight]);
+        return CGSizeMake((size.width - 10) / 2, [IssueViewController getIssueCellHeight]);
     } else {
-        return CGSizeMake(screenRect.size.width - 10, [IssueViewController getIssueCellHeight]);
+        CGSize sizeRes = CGSizeMake(size.width - 10, [IssueViewController getIssueCellHeight]);
+        if (size.width > size.height) {
+            sizeRes = CGSizeMake((size.width - 10) / 2, [IssueViewController getIssueCellHeight]);
+        }
+        return sizeRes;
     }
 }
 

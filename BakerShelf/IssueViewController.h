@@ -93,6 +93,7 @@ typedef struct {
 + (UI)getIssueContentMeasures;
 + (int)getIssueCellHeight;
 + (CGSize)getIssueCellSize;
++ (CGSize)screenSize;
 
 @end
 
