@@ -335,8 +335,8 @@
             if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
                 height = height + 12;
             } else {
-                CGFloat cellWidth = [IssueViewController getIssueCellSize].width;
-                landscapePadding = width / 4 - cellWidth / 2;
+//                CGFloat cellWidth = [IssueViewController getIssueCellSize].width;
+//                landscapePadding = width / 4 - cellWidth / 2;
             }
             image  = @"shelf-bg-landscape";
         }
